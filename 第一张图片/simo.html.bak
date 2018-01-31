@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script src="my.js"></script>
+  <script src="china.js"></script>
+  <title>Document</title>
+   <style>
+   body{
+    background:#333;
+   }
+     *{margin:0;padding:0}
+
+	 .clear{
+	   display:table;
+	   content:"";
+	   clear:both;
+	 }
+    .bigcontainer{
+	   
+	   width:1254px;
+	   height:616px;
+	   margin:30px auto;
+	}
+	.bigheader{
+	    width:100%;
+		margin-bottom:6px;
+	}
+	.cleft{
+	  width:344px;
+	  height:424px;
+	  background:#192125;
+	
+	  float:left;
+	  margin-right:6px;
+	}
+	.cleft .cleft_top{
+
+	  height:230px;
+	
+	  margin-bottom:6px;
+	}
+	.cleft .cleft_bottom{
+	 height:188px;
+	
+	}
+	.cmiddle{
+	   width:554px;
+	  height:424px;
+	  background:#192125;
+	
+	  float:left;
+	  margin-right:6px;
+	}
+	.cright{
+	   width:344px;
+	  height:424px;
+	  background:#192125;
+	
+	  float:left;
+	}
+	.cright .cright_top{
+	  height:230px;
+	
+	  margin-bottom:6px;
+	}
+	.cright .cright_bottom{
+	    height:188px;
+	
+	}
+	.bigfooter{
+	   width:100%;
+	   height:186px;
+	   background:#192125;
+	 
+	}
+	.bigtitle{
+	  background:#141e27;
+	  height:42px;
+	  line-height:42px;
+	  position:relative;
+	}
+	.bigtitle .bigtitle-shadow{
+	position: absolute;
+    top: 18px;
+    left: 22px;
+    width: 6px;
+    height: 6px;
+    background: #00c9d2;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px #0CC;
+    -moz-box-shadow: 0 0 10px #0CC;
+    -ms-box-shadow: 0 0 10px #0CC;
+    box-shadow: 0 0 10px #0CC;
+
+	}
+	.bigtitle  span{
+	 margin-left:36px;
+	 color:#f6fdff;
+	 font-family:"微软雅黑";
+	}
+	
+    .cmiddle .content-title{
+	  padding:12px;
+	  height:41px;
+
+	}
+	ul li{
+	  list-style:none;
+	  float:left;
+	  margin-right:30px;
+	  padding:0 3px 0 3px;
+	  overflow:hidden;
+	  text-align:center;
+	  font-size:12px;
+	  color:#f6fdff;
+	  font-weight:bold;
+	  line-height:22px;
+	}
+	ul li:nth-child(6n){
+	 margin-right:0;
+	}
+	ul{
+	  overflow:hidden;
+	  border-bottom:1px solid #525e69;
+	  padding-bottom:6px;
+	
+	}
+	.cmiddle ul li span{
+	  color:#58cbfd;
+	  font-size:14px;
+	  font-weight:bold;
+	  margin-right:5px;
+	}
+	#mypie{
+	 
+	 height:188px;
+    
+	}
+	#foot_bar{
+	 height:144px;
+
+	}
+	#right_bar{
+	  height:146px;
+	}
+	#middle_map{
+	  height:310px;
+
+	}
+	#barandpie{
+	  height:188px;
+	}
+	.cleft_bottom .person-msg{
+	  height:146px;
+	  
+	
+	}
+	.cleft_bottom .person-msg .icon_wraper{
+	  width:100%;
+	  height:50px;
+	
+	  line-height:50px;
+	  margin-top:10px;
+	  font-weight:bold;
+	  color:#f6fdff;
+	}
+	.cleft_bottom .person-msg .icon_wraper .icon_rate span{
+	      color:#58cbfd;
+		  margin-right:3px;
+     
+	}
+	.cleft_bottom .person-msg .icon_nv{
+	  width:20px;
+	  height:32px;
+	  background:url('图标_女.png') no-repeat;
+	  float:left;
+	  margin:8px 20px 0px 20px;
+	} 
+	.cleft_bottom .person-msg .icon_nan{
+	  width:20px;
+	  height:32px;
+	  background:url('图标_男.png') no-repeat;
+	  float:left;
+	  margin:8px 20px 0px 20px;
+	} 
+	 #nv_content{
+	       width:180px;
+	       height:20px;
+	       margin:15px 20px 0px 0px;
+		   float:left;
+		   background:url("切图女.png") no-repeat;
+	}
+	 #nan_content{
+	       width:180px;
+	       height:20px;
+	       margin:15px 20px 0px 0px;
+		   float:left;
+		   background:url("切图男.png") no-repeat;
+	}
+   </style>
+ </head>
+ <body>
+    <div class="bigcontainer">
+	       <div class="bigheader clear">
+		         <div class="cleft">
+				    <div class="cleft_top">
+					     <div class="bigtitle">
+						   <div class="bigtitle-shadow"></div>
+						    <span>总体用户年龄分布</span>
+						  </div>
+						  <div id="mypie"></div>
+					</div>
+					<div class="cleft_bottom">
+					       <div class="bigtitle">
+						   <div class="bigtitle-shadow"></div>
+						    <span>总体用户性别比例</span>
+						  </div>
+						   <div class="person-msg">
+						       <div class="icon_wraper">
+							       <div class="icon_nv"></div>
+								   <div id="nv_content"></div>
+								   <div class="icon_rate">
+								      <span>38.12</span>%
+								   </div>
+							   </div>
+
+							   <div class="icon_wraper">
+							       <div class="icon_nan"></div>
+								   <div id="nan_content"></div>
+								   <div class="icon_rate">
+								      <span>61.88</span>%
+								   </div>
+							   </div>
+						   </div>
+					</div>
+				 </div>
+				<div class="cmiddle">
+				       <div class="bigtitle">
+						   <div class="bigtitle-shadow"></div>
+						    <span>总体收入分析</span>
+					  </div>
+					  <div class="content-title">
+							<ul>
+								 <li>
+								    <p>全国总业务收入</p>
+									<span>1000</span>亿
+								 </li>
+								 <li>  
+								  <p>环比增长</p>
+									<span>5</span>%
+								 </li>
+								  <li>  
+								  <p>用户数量</p>
+									<span>5000</span>万
+								 </li>
+                                 <li>  
+								  <p>环比增长</p>
+									<span>5</span>%
+								 </li>
+								  <li>  
+								  <p>人均消费</p>
+									<span>2000</span>元
+								 </li>
+								   <li>  
+								  <p>环比增长</p>
+									<span>-5</span>%
+								 </li>
+								
+						   </ul>
+					  </div>
+					<div id="middle_map"></div>
+				</div>
+				<div class="cright">
+				   <div class="cright_top">
+				         <div class="bigtitle">
+						   <div class="bigtitle-shadow"></div>
+						    <span>业务总体收入与增长率</span>
+					    </div>
+						<div id="barandpie"></div>
+				   </div>
+				   <div class="cright_bottom">
+				        <div class="bigtitle">
+						   <div class="bigtitle-shadow"></div>
+						    <span>业务总体收入分类及占比</span>
+					  </div>
+					  <div id="right_bar"></div>
+				   </div>
+				</div>
+		   </div>
+		   <div class="bigfooter">
+		       <div class="bigtitle">
+						   <div class="bigtitle-shadow"></div>
+						    <span>全国各省收入占比</span>
+			 </div>
+			 <div id="foot_bar"></div>
+		   </div>
+	</div>
+	<script>
+	           pieFactory("mypie")
+	          function pieFactory(id,params){
+	        
+			
+           	 var chart=document.getElementById(id);
+           
+              var myChart = echarts.init(chart);
+            	
+                 var option={
+          		
+                 
+          		 tooltip : {  //提示框组件
+                          show: true,
+                          formatter: "{a} <br/>{b} : {c} ({d}%)"  //正则设置格式
+                      },
+					 color:["#2998e4","#48ca6b","#37eee7"],
+          			legend: {  //图例组件
+                          orient:'vertical', //图例的布局朝向
+                          right:'0%',  //图例的位置--离左边的距离
+                          top:'46%',  //图例的位置--离上边的距离
+                          itemGap:6, //图例每项之间的间隔。横向布局时为水平间隔，纵向布局时为纵向间隔。
+                          data:['25-34岁','18-24岁','35-49岁'],
+          				textStyle:{
+          				  color:'#f6fdff',
+          				  fontSize:12
+          				}
+                      },
+                      series : [
+                          {
+                              name: '年龄分布',
+                              type: 'pie',
+                              radius: [0,70],
+                              center:['30%','55%'],
+
+                              data:[
+                                  {value:500, name:'25-34岁',icon:'pie',
+								    itemStyle:{
+									  normal:{
+										     borderWidth:10,
+									        
+									  }
+									}
+								  },
+                                  {value:435, name:'18-24岁',icon:'pie'},
+                                  {value:260, name:'35-49岁',icon:'pie'},
+                                
+                              ],
+                              roseType: 'angle',
+
+                              itemStyle: {
+                                  emphasis: {
+                                      shadowBlur: 200,
+                                      shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                  },
+          						normal:{
+          						  label:{
+          						     show:true,
+          							 formatter:'{b}:{c} ({d}%)'
+          						  },
+          						  labelLine:{show:true},
+          						  
+          						}
+                              },
+                              label: {
+                                  normal: {
+          							show:false,
+                                      textStyle: {
+                                          color: 'rgba(255, 255, 255, 0.3)'
+                                      }
+                                  }
+                              },
+                              labelLine: {
+                                  normal: {
+                                      lineStyle: {
+                                          color: 'rgba(255, 255, 255, 0.3)'
+                                      }
+                                  }
+                              }
+
+                          }
+                      ],
+			      grid: {             //设置网格属性  
+              left:'0%',     //网格距离容器左侧的距离  
+              right:'0%',       //网格距离容器右侧的距离  
+              borderWidth:1 
+        }  
+                  }
+
+
+                  // 使用刚指定的配置项和数据显示图表。
+                  myChart.setOption(option);
+	     
+	  
+	  }
+	
+
+       var  x=["北京","上海","浙江","天津","江苏","广东","福建","辽宁","山东","内蒙古","重庆","湖北","湖南","海南","吉林"];
+	   var  y=['16.50','12.50','10.80','8.90','7.60','6.40','5.00','4.00','5.00','3.00','2.90','2.00','1.50','1.00','0.90'];
+
+       var json={xdata:x,
+	       ydata:y
+	   }
+	//底部柱形图生成  json 包含有x轴数据和items的数据     
+		  ChartFactory("foot_bar",json)
+    	  function ChartFactory(id,params){
+	     var myChart = echarts.init(document.getElementById(id));
+ 
+	   var option = {  
+        tooltip: {          //聚焦触发的效果，详情可参见。全局设置  
+            trigger: 'axis',  
+            axisPointer: {  
+                type: 'cross',  
+                crossStyle: {  
+                    color: '#f8f1ff' 
+                }  
+            }  
+        },  
+       
+        legend: {           //图表图例注释  
+            right: '10%' ,  
+            //data:['降水量','蒸发量','温度']  
+        },  
+        xAxis: [        //x轴属性设置，需要详细了解该模块属性配置，可参见https://echarts.baidu.com/option.html#xAxis  
+            {   
+			    show:true,
+				 axisLine:{                  //表示坐标轴是否显示  
+                  show: false 
+                },  
+				 axisTick:{
+				  show:false
+				 },
+				  axisLabel: {
+                              show: true,
+                              textStyle: {
+								  fontSize:12,
+								  color:'#fff',
+								  fontWeight:900
+                              }
+                          },
+                type: 'category',           //表示类型为科目类  
+                data:params.xdata       //坐标轴的值  
+            }  
+        ],  
+        yAxis: [                            //（可以有多个坐标轴），数组中的对象位置决定了yAxisIndex的值（yAxisIndex会在series中用到）  
+            {   
+			    show:false,
+                type: 'value',              //表示属性为value类  
+                name: '降水',                 //坐标轴名称  
+                minInterval: 1,             //坐标最小划分单位，设置为1表示坐标轴节点保留整数  
+                splitNumber: 4,             //指定坐标轴节点分割数（非强制），会按照预算自行调整最合适的分割数  
+                axisLine:{                  //表示坐标轴是否显示  
+                  show: false 
+                },  
+                splitLine: {                //表示分割线属性设置  
+                    lineStyle: {            //表示分割线的样式  
+                        type: 'dashed'         //虚线  
+                    }  
+                },  
+                axisLabel: {  
+                    formatter: '{value} ml'     //表示所有值得单位  
+                }  
+            },  
+       
+        ],  
+        series: [           //坐标轴实际数据内容  
+            {  
+                name:'降水量',             //数据名称  
+                type:'bar',                 //数据表现形式（bar为柱形图，line为折线图）  
+                barWidth:'50%', 
+				 
+				//柱形图宽度  
+                itemStyle:{                 //柱子的属性设置  
+                    normal:{  
+                        color: '#33ccff',   //柱子的颜色设置  
+						  barBorderRadius:[5,5,0,0]
+                    }  
+                },  
+                data:params.ydata,  //该条数据对应一条记录 
+				label:{
+          				    normal:{
+          					    show:true,
+          						position:'top',
+                                formatter:'{c}%',
+								fontSize:12,
+								color:'#f6fdff',
+								fontWeight:500
+
+          					}
+          			}
+            },  
+
+		
+          
+        ],  
+        grid: {             //设置网格属性  
+            left:'2%',     //网格距离容器左侧的距离  
+            right:'2%', 
+			top:'26%',
+			bottom:'26%',//网格距离容器右侧的距离  
+            borderWidth:1 
+        }  
+    };  
+
+	 myChart.setOption(option);
+	 
+	}
+ //生成右边的条行图
+      mypie("right_bar")
+     function mypie(id){
+	    
+	            var chart=document.getElementById(id);
+	         
+	           	var myChart = echarts.init(chart);
+	            option = {
+	                tooltip : {
+	                     show: true,
+	        			 trigger: 'axis',
+	                     formatter: "{b}:{c}%",  //正则设置格式
+	        			 axisPointer: { // 坐标轴指示器，坐标轴触发有效
+	        				type: 'shadow', // 默认为直线，可选为：'line' | 'shadow'
+	        		     	},
+	                },
+	                grid:{   //绘图区调整
+	                    left:'25%',  //左留白
+	                    top:'5%',   //上留白
+	                    right:'0%',  //右留白
+	                    bottom:"10%"   
+	                },
+	                xAxis : [
+	                    {
+	                        show:false,
+	                        type : 'value',
+	                        boundaryGap : ['0%', '80%'],
+	                        position: 'top'
+	                    }
+	                ],
+	                yAxis : [
+	                    {
+	                        type : 'category',
+	                        data : ['生活缴费','扫描付','和包券','理财','充值'],
+	        				barGap:10,
+	                        axisLine:{show:false},     //坐标轴
+	                        axisTick:[{    //坐标轴小标记
+	                            show:false
+	                        }],
+	                        axisLabel:{
+	                            textStyle:{
+	                                fontSize:'14',
+									color:"#f6fdff"
+	                            }
+	                        }
+	                    }
+	                ],
+	                series : [
+	                    {
+	                        name:'数据：',
+	                        type:'bar',
+	                        tooltip:{show:true},
+	           
+	                        barWidth: '9', 
+	                        
+	                        data:[10.20, 11.20, 13.00, 20.40,39.20],
+	        			
+	                        itemStyle:{
+	                            normal:{    //柱状图颜色
+	                                color:'#13e274',
+	                                label:{
+	                                    show: true,   //显示文本
+	                                    position: 'right',  //数据值位置
+	        							formatter:'{c}%',
+	                                    textStyle:{
+	                                        color:'#f6fdff',
+	                                        fontSize:'14px'
+	                                    }
+	                                },
+	                  				   barBorderRadius:[0,2,2,0],
+	              					   
+	                            }
+	                        }
+	                    }
+	                ]
+	            };
+	             
+	              myChart.setOption(option);
+	 
+	 }
+ //生成中国地图
+      ChinaFactory('middle_map');
+       function ChinaFactory(id){
+          
+	          var chart=document.getElementById(id);
+            	 
+              var myChart = echarts.init(chart, 'shine');
+            	        
+             function randomData() {
+                     return Math.round(Math.random()*1000);
+                }
+      
+               option = {
+               tooltip: {
+                trigger: 'item'
+               },
+               
+               series: [
+                {
+                  itemStyle: {
+                   normal: {
+                        color: '#5ca9e8',
+                         borderWidth: .5,//区域边框宽度
+                         borderColor: ' #5499ee',//区域边框颜色
+                         areaColor:"#296dc1",//区域颜色
+						 textStyle:{
+						   fontSize:10
+						 }
+                      },
+            		  emphasis:{
+            		                   borderWidth: .5,
+                                        borderColor: '#4b0082',
+                                        areaColor:"#ffdead",
+            		  }
+                    },
+                 name: '各省业务总收入',
+                 type: 'map',
+                 mapType: 'china',
+                 roam: false,
+                 label: {
+                  normal: {
+                   show: true,
+            	  textStyle:{color:"#eee",
+				     fontSize:10
+					
+				  }
+                  },
+                  emphasis: {
+                   show: true,
+            	   textStyle:{
+            	     color:"red"
+            	   }
+                  }
+                 },
+                 data:[
+            	 {  
+                    name:"南海诸岛",value:0,  
+                   
+            	 },
+                  {name: '北京',value: randomData() },
+                  {name: '天津',value: randomData() },
+                  {name: '上海',value: randomData() },
+                  {name: '重庆',value: randomData() },
+                  {name: '河北',value: randomData() },
+                  {name: '河南',value: randomData() },
+                  {name: '云南',value: randomData() },
+                  {name: '辽宁',value: randomData() },
+                  {name: '黑龙江',value: randomData() },
+                  {name: '湖南',value: randomData() },
+                  {name: '安徽',value: randomData() },
+                  {name: '山东',value: randomData() },
+                  {name: '新疆',value: randomData() },
+                  {name: '江苏',value: randomData() },
+                  {name: '浙江',value: randomData() },
+                  {name: '江西',value: randomData() },
+                  {name: '湖北',value: randomData() },
+                  {name: '广西',value: randomData() },
+                  {name: '甘肃',value: randomData() },
+                  {name: '山西',value: randomData() },
+                  {name: '内蒙古',value: randomData() },
+                  {name: '陕西',value: randomData() },
+                  {name: '吉林',value: randomData() },
+                  {name: '福建',value: randomData() },
+                  {name: '贵州',value: randomData() },
+                  {name: '广东',value: randomData() },
+                  {name: '青海',value: randomData() },
+                  {name: '西藏',value: randomData() },
+                  {name: '四川',value: randomData() },
+                  {name: '宁夏',value: randomData() },
+                  {name: '海南',value: randomData() },
+                  {name: '台湾',value: randomData() },
+                  {name: '香港',value: randomData() },
+                  {name: '澳门',value: randomData() }
+                 ]
+                 
+                }
+               ]
+              };
+                 
+                myChart.setOption(option); 
+                
+                myChart.on("click",function(param){
+            	    var name=param.data.name;
+            		var value=param.data.value;
+            		console.log(param);
+            		alert("选中的省会是："+name+"数值是："+value)
+            	    
+            	})
+	 }
+
+	      //生成折线图和柱形图的混合图
+             barAndPie("barandpie")
+		     function  barAndPie(id){
+     var myChart = echarts.init(document.getElementById(id));
+
+		option = { 
+		tooltip : {  
+			trigger: 'axis'  
+		},  
+    
+    xAxis : [  
+        {  
+            type : 'category',  
+            position: 'bottom',  
+            boundaryGap: true,  
+            axisLine : {    // 轴线  
+                show: true,  
+                lineStyle: {  
+                  
+                }  
+            },  
+            axisTick : {    // 轴标记  
+                show:false,  
+                length: 10,  
+                lineStyle: {  
+                    color: 'red',  
+                    type: 'solid',  
+                    width: 2  
+                }  
+            },  
+            axisLabel : {  
+                show:true,  
+                interval: 'auto',    // {number}  
+                margin: 3,  
+                textStyle: {  
+                    color: '#f6fdff',  
+                    fontSize: 10,  
+                    fontWeight: 'bold'  
+                }  
+            },  
+           
+   
+            data : [  
+                '2013','2014','2015','2016','2017'
+            ]  
+       },  
+    ],  
+    yAxis : [  
+        {  
+            type : 'value',  
+			  splitNumber: 2,  
+            position: 'left',  
+         
+            boundaryGap: [0,1],  
+            axisLine : {    // 轴线  
+                show: true,  
+                lineStyle: {  
+                
+                }  
+            },  
+            axisTick : {    // 轴标记  
+                show:false,  
+		
+                length: 0,  
+                lineStyle: {  
+                    color: 'green',  
+                    type: 'solid',  
+                    width: 0 
+                }  
+            },  
+			  splitLine : {  
+                show: false  
+            } ,
+            axisLabel : {  
+                show:true,  
+                interval: 'auto',  
+                margin: 4,  
+                formatter: '{value}',    
+                textStyle: {  
+                    color: '#f6fdff',  
+                    fontSize: 10,  
+                    fontStyle: 'normal',  
+                    fontWeight: 'bold'  
+                }  
+            },  
+        },  
+        {  
+            type : 'value',  
+            splitNumber: 2,  
+            axisLabel : {  
+                formatter: function (value) {  
+
+                    return value ;
+                }  
+            },  
+			    axisTick : {   
+                show:false,  
+		
+                length: 0,  
+                lineStyle: {  
+                    color: 'green',  
+                    type: 'solid',  
+                    width: 0 
+                }  
+            },  
+            splitLine : {  
+                show: false  
+            },
+			     axisLabel : {  
+                show:true,  
+                interval: 'auto',  
+                margin: 4,  
+                formatter: '{value}',    
+                textStyle: {  
+                    color: '#f6fdff',  
+                    fontSize: 10,  
+                    fontStyle: 'normal',  
+                    fontWeight: 'bold'  
+                }  
+            }
+        }  
+    ],  
+    series : [  
+        {  
+            name: '收入(千万)',  
+            type: 'bar',  
+			barWidth:25,
+            itemStyle:{  
+                    normal:{  
+                        color:"#4ad8e7"  
+                    }  
+            },  
+		    label:{
+          				    normal:{
+          					    show:true,
+          						position:'top',
+                         
+								fontSize:10,
+								color:'#f6fdff',
+								fontWeight:500
+
+          					}
+          			},
+            data:[9.65, 11.28, 14.10, 15.71, 19.63]  
+        },  
+        {  
+            name: '增长率',  
+            type: 'line',  
+            yAxisIndex: 1,  
+            itemStyle:{  
+                    normal:{  
+                        color:"#e27226"  
+                    }  
+            },  
+           
+		    label:{
+          				    normal:{
+          					    show:true,
+          						position:'top',
+                                formatter:'{c}%',
+								fontSize:10,
+								color:'#e27226',
+								fontWeight:500
+
+          					}
+          			},
+            
+            data: [18.20, 16.90, 25.00, 18.50, 17.50]  
+        },  
+    ],
+	 grid: {             //设置网格属性  
+            left:'12%',     //网格距离容器左侧的距离  
+            right:'12%', 
+			top:'10%',
+			bottom:'10%',//网格距离容器右侧的距离  
+            borderWidth:1 
+        }  
+};  
+                       
+myChart.setOption(option);  
+
+	   
+		 
+}
+    //生成男女小人比例 
+     count("nv_content","34.12%");
+	 count("nan_content","65.88%");
+  function count(id,score){
+
+           var per=document.getElementById(id);
+
+		   score=parseInt(score);
+		   score=score/10;
+	       if(score%2==0){
+		     var target=(10-score)*2;
+			 target=target*20*-1+"px";
+         
+		     per.style.backgroundPosition='0  '+target+'';
+		 }else{
+			  score=score*2;
+		    var target=20-Math.round(score);
+
+			
+			 target=target*20*-1+"px";
+		     per.style.backgroundPosition='0  '+target+'';
+		   
+		 }
+	   }
+
+	 </script>
+
+	</script>
+ </body>
+</html>

@@ -1,0 +1,65 @@
+{ "middle_map":
+ { "datas":[ { "name":"南海诸岛", "value":"0" }, 
+ { "name":"北京", "value":"10" },
+ { "name":"天津", "value":"10" },
+ { "name":"上海", "value":"30" },
+ { "name":"重庆", "value":"10" }, 
+ { "name":"河北", "value":"20" }, 
+ { "name":"河南", "value":"30" },
+ { "name":"云南", "value":"20" },
+ { "name":"辽宁", "value":"30" }, 
+ { "name":"黑龙江", "value":"20" },
+ { "name":"湖南", "value":"40" }, 
+ { "name":"安徽", "value":"40" }, 
+ { "name":"山东", "value":"140" }, 
+ { "name":"新疆", "value":"40" },
+ { "name":"江苏", "value":"40" }, 
+ { "name":"浙江", "value":"40" },
+ { "name":"江西", "value":"40" }, 
+ { "name":"湖北", "value":"40" }, 
+ { "name":"广西", "value":"40" }, 
+ { "name":"甘肃", "value":"40" },
+ { "name":"山西", "value":"40" }, 
+ { "name":"内蒙古", "value":"40" }, 
+ { "name":"陕西", "value":"40" }, 
+ { "name":"吉林", "value":"40" },
+ { "name":"福建", "value":"40" }, 
+ { "name":"贵州", "value":"40" }, 
+ { "name":"广东", "value":"40" }, 
+ { "name":"青海", "value":"40" }, 
+ { "name":"西藏", "value":"40" },
+ { "name":"四川", "value":"40" }, 
+ { "name":"宁夏", "value":"40" },
+ { "name":"海南", "value":"40" },
+ { "name":"台湾", "value":"40" }
+ { "name":"香港", "value":"40" },
+ { "name":"澳门", "value":"40" } ] },
+
+ "foot_bar":[ 
+ { "name":"北京", "value":"16.5" }, 
+ { "name":"上海", "value":"12.5" }, 
+ { "name":"浙江", "value":"10.8" }, 
+ { "name":"天津", "value":"8.9" }, 
+ { "name":"江苏", "value":"7.6" },
+ { "name":"广东", "value":"6.4" }, 
+ { "name":"福建", "value":"6.0" },
+ { "name":"辽宁", "value":"5.1" }, 
+ { "name":"山东", "value":"4.0" }, 
+ { "name":"内蒙古", "value":"3.2" }, 
+ { "name":"重庆", "value":"2.9" },
+ { "name":"湖北", "value":"2.8" },
+ { "name":"湖南", "value":"1.6" },
+ { "name":"海南", "value":"0.9" },
+ { "name":"吉林", "value":"0.5" } ], 
+ 
+"barandpie":{ "datas":[ { "xValue":"2013", "yValue":"9.65", "zValue":"18.20" }, { "xValue":"2014", "yValue":"11.28", "zValue":"16.90" }, { "xValue":"2015", "yValue":"14.10", "zValue":"25.00" }, { "xValue":"2016", "yValue":"15.71", "zValue":"18.50" }, { "xValue":"2017", "yValue":"19.63", "zValue":"17.50" } ] },
+ 
+"mypie":{ "items":[ { "name":"25-34岁", "icon":"pie", "value":"SIMO" }, { "name":"18-24岁", "icon":"pie", "value":"SYS01" }, { "name":"35-49岁", "icon":"pie", "value":"SYS01" } ] }, 
+
+"person-msg":{ "nv_span":"38.12", "nan_span":"61.88" }, 
+
+"right_bar":[ { "name":"生活缴费", "value":"10.20" }, { "name":"扫码付", "value":"11.20" }, { "name":"和包券", "value":"13.00" }, { "name":"理财", "value":"20.40" }, { "name":"充值", "value":"39.20" } ], 
+
+"yxl_ul":{ "users_increase":{ "text":"环比增长", "span":"5" }, "nation_income":{ "text":"全国总业务收入", "span":"1000" }, "nation_increase":{ "text":"环比增长", "span":"5" }, "average_increase":{ "text":"环比增长", "span":"-5" }, "average_cost":{ "text":"人均消费", "span":"2000" }, "users_amount":{ "text":"用户数量", "span":"5000" } } 
+
+}
